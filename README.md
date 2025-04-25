@@ -39,17 +39,9 @@ npm install
 Ensure the application user can access Docker’s UNIX socket (`/var/run/docker.sock`):
 
 ```bash
-sudo usermod -aG docker compute
+sudo usermod -aG docker $USER
 # Log out and back in, or run:
 newgrp docker
-```
-
-Alternatively, grant passwordless sudo for the restart commands:
-
-```bash
-sudo visudo
-# add:
-compute ALL=(ALL) NOPASSWD: /usr/bin/docker restart *
 ```
 
 ## Running with PM2
@@ -69,7 +61,7 @@ pm2 start index.js --name restart-ui
 ### 3. Generate systemd unit
 
 ```bash
-pm2 startup systemd -u compute --hp /home/compute
+pm2 startup systemd -u $USER --hp /home/compute
 # Follow the printed instructions
 ```
 
