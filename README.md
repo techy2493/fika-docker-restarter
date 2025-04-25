@@ -50,12 +50,6 @@ compute ALL=(ALL) NOPASSWD: /usr/bin/docker restart *
 
 ## Running with PM2
 
-Before you begin, make sure dependencies are installed:
-
-```bash
-npm install
-```
-
 ### 1. Install PM2 globally
 
 ```bash
