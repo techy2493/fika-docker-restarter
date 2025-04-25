@@ -61,7 +61,7 @@ pm2 start index.js --name restart-ui
 ### 3. Generate systemd unit
 
 ```bash
-pm2 startup systemd -u $USER --hp /home/compute
+pm2 startup systemd -u $USER --hp $HOME
 # Follow the printed instructions
 ```
 
@@ -75,8 +75,8 @@ pm2 save
 
 ```bash
 sudo systemctl daemon-reload
-sudo systemctl enable pm2-compute
-sudo systemctl start pm2-compute
+sudo systemctl enable pm2-<YOURUSER>
+sudo systemctl start pm2-<YOURUSER>
 ```
 
 ## Usage
