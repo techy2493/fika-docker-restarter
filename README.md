@@ -2,6 +2,10 @@
 
 A minimal Node.js/Express application that provides a web interface for restarting Docker containers.
 
+The reccomended containers for use with this script are
+- `ghcr.io/zhliau/fika-headless-docker`
+- `ghcr.io/zhliau/fika-spt-server-docker`
+
 ## Configuration
 
 This application can be configured via environment variables or a `.env` file. Defaults:
